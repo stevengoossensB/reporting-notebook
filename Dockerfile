@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND noninteractive
 USER ${NB_USER}
 
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install elasticsearch-dsl 
+RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas
 
 WORKDIR ${HOME}
 ENTRYPOINT ["/opt/jupyter/scripts/jupyter-entrypoint.sh"]
