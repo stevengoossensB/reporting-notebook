@@ -9,10 +9,10 @@ LABEL maintainer="Steven Goossens"
 LABEL description="Dockerfile for reporting notebook on top of Elastic"
 
 ENV DEBIAN_FRONTEND noninteractive
-USER root
+USER ${NB_USER}
 
-RUN pip install –-upgrade pip
-RUN pip install elasticsearch-dsl 
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install elasticsearch-dsl 
 
 WORKDIR ${HOME}
 ENTRYPOINT ["/opt/jupyter/scripts/jupyter-entrypoint.sh"]
