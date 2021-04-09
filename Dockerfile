@@ -19,6 +19,8 @@ USER ${NB_USER}
 
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas matplotlib plotly cufflinks notebook-as-pdf jupyter-cjk-xelatex pyppeteer pillow
+RUN pip install jupyter_contrib_nbextensions
+RUN jupyter contrib nbextension install --user
 
 WORKDIR ${HOME}
 EXPOSE 8888
