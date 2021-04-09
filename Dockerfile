@@ -12,7 +12,8 @@ ENV DEBIAN_FRONTEND noninteractive
 USER ${NB_USER}
 
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas matplotlib plotly cufflinks
+RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas matplotlib plotly cufflinks notebook-as-pdf xelatex pyppeteer
+
 
 WORKDIR ${HOME}
 EXPOSE 8888
