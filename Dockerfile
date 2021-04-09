@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 USER root
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic -y
+RUN apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic pandoc -y
 
 USER ${NB_USER}
 
