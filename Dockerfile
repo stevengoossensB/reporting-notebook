@@ -11,7 +11,9 @@ LABEL description="Dockerfile for reporting notebook on top of Elastic"
 ENV DEBIAN_FRONTEND noninteractive
 
 USER root
-RUN apt-get install texlive-xetex texlive-fonts-recommended texlive-generic-recommended
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install texlive-xetex texlive-fonts-recommended texlive-generic-recommended -y
 
 USER ${NB_USER}
 
