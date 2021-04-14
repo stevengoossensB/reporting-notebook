@@ -18,7 +18,7 @@ RUN apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generi
 USER ${NB_USER}
 
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas matplotlib plotly cufflinks notebook-as-pdf jupyter-cjk-xelatex pyppeteer pillow jupyter-docx-bundler
+RUN python3 -m pip install elasticsearch-dsl elasticsearch pandas matplotlib plotly cufflinks notebook-as-pdf jupyter-cjk-xelatex pyppeteer pillow jupyter-docx-bundler nb-mermaid
 RUN pip install jupyter_contrib_nbextensions
 RUN jupyter contrib nbextension install --user
 RUN jupyter bundlerextension enable --py jupyter_docx_bundler --sys-prefix
