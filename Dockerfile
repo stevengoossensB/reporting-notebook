@@ -25,6 +25,8 @@ RUN pip install jupyter_contrib_nbextensions
 RUN jupyter contrib nbextension install --user
 RUN jupyter bundlerextension enable --py jupyter_docx_bundler --sys-prefix
 RUN jupyter labextension install jupyterlab_templates && jupyter serverextension enable --py jupyterlab_templates
+jupyter nbextension install --py jupytemplate --sys-prefix
+jupyter nbextension enable jupytemplate/main --sys-prefix
 
 WORKDIR ${HOME}
 EXPOSE 8888
